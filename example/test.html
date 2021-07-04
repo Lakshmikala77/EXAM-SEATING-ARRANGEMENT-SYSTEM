@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEMO</title>
+  <link rel="stylesheet" href="Test.js">
+</head>
+<style>
+  div{
+    align-items: center;
+  }
+</style>
+<body>
+  <label for="start">Enter start number</label>
+  <input type="number" id="start" value="">
+  <input type="button" value="Generate a table." onclick="generate_table()">
+  <select>
+    <option>mid</option>
+    <option>external</option>
+  </select>
+  <div id="demo" class="demo"></div>
+  <script>
+    function generate_table() {
+    // get the reference for the body
+    var body = document.getElementsByTagName("body")[0];
+  
+    // creates a <table> element and a <tbody> element
+    var tbl = document.createElement("table");
+    var tblBody = document.createElement("tbody");
+    var x = document.getElementById("start").value;
+  document.getElementById("demo").innerHTML = x;
+      
+    // creating all cells
+    for (var i =0; i < 6; i++) {
+      // creates a table row
+      var row = document.createElement("tr");
+  
+      for (var j = 0; j <5 ; j++) {
+        // Create a <td> element and a text node, make the text
+        // node the contents of the <td>, and put the <td> at
+        // the end of the table row
+        var cell = document.createElement("td");
+        var cellText = document.createTextNode("174G1A0"+x+"CSE");
+      
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+        ++x;
+      }
+  
+      // add the row to the end of the table body
+      tblBody.appendChild(row);
+    }
+  
+    // put the <tbody> in the <table>
+    tbl.appendChild(tblBody);
+    // appends <table> into <body>
+    body.appendChild(tbl);
+    // sets the border attribute of tbl to 2;
+    tbl.setAttribute("border", "2");
+  }
+  
+  </script>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,22 @@
+/*--table main heding--*/
+.main-table,.main-row,.Room-table{
+    width:100%;
+}
+.main-table-data{
+    width: min-content;
+    padding: 5px;
+    margin: 0px;
+    border-width: 2px;
+    border-style: groove;
+}
+.main-data{
+    width: min-content;
+    padding: 5px;
+    margin: 0px;
+    border-width: 2px;
+    border: solid black;
+}
+.main-row{
+    width:100%;
+    height:50%;
+}
